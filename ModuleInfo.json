@@ -1,0 +1,35 @@
+{
+  "Name": "SuperFlag",
+  "Author": "AwesomeTMC, Evanbowl",
+  "Description": "An API to allow other modules to check if conditions specified here are True or False.",
+  "APIId": "SuperFlag",
+  "ModuleExtensionDefinition": [
+    {
+      "Name": "SuperFlagCustomFlags",
+      "CodeGenSource": "GEN_SuperFlag.h",
+      "CodeGenDestination": "include/SuperFlag.h",
+      "Variables": [
+        "Name",
+        "FunctionName"
+      ],
+      "CodeGenData": [
+        {
+          "ReplaceTargetName": "CustomFlagConditionals",
+          "ReplaceFormatData": "{{ \"{0}\", {1} }}"
+        },
+        {
+          "ReplaceTargetName": "Externs",
+          "ReplaceFormatData": "extern bool {1}(JMapInfoIter iter);"
+        }
+      ]
+    }
+  ],
+  "ModuleDependancies": [
+    "PTUtils"
+  ],
+  "BuildTasks": [{
+    "Task": "Copy",
+    "From": "disc/",
+    "To": "../../Output/disc/"
+  }]
+}
