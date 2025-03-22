@@ -13,7 +13,9 @@ First, download [the template](disc/SystemData/SuperFlag.arc). Put it in your mo
 Super Flags are essentially booleans and have two values: true or false.
 
 ## FlagName
-Name this whatever you want. If a module's BCSV file has a FlagName and indicates that it's for SuperFlag, put the name you have here in that field.
+Name this whatever you want*. If a module's BCSV file has a FlagName and indicates that it's for SuperFlag, put the name you have here in that field.
+
+*The flag name "True" is reserved and always returns true.
 
 ## FlagType
 
